@@ -18,4 +18,4 @@ deploy:
   bucket_name: "elasticbeanstalk-us-east-1-291109436014"
   bucket_path: "demo-cicd"
   on:
-    branch: features
+    branch: master

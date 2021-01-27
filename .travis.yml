@@ -1,0 +1,21 @@
+sudo: required
+services:
+  - docker
+  
+before_install:
+  - docker build -t ikeowz/cicd-react -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true ikeowz/cicd-react npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  region: "us-east-1"
+  app: "demo-cicd"
+  env: "DemoCicd-env"
+  bucket_name: "elasticbeanstalk-us-east-1-291109436014"
+  bucket_path: "demo-cicd"
+  on:
+    branch: features

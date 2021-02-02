@@ -5,7 +5,7 @@ class Post extends Component {
   render() {
     return (
       <div className="post">
-        <h1>Identifying Best Practices for CI/CD</h1>
+        <h1>Identifying Best Practices for CI/CD Infrastructure</h1>
         <h3>Use Version Control (Vadapalli, 2018)</h3>
         <p>Typically a version control system like Git, Bitbucket, or Subversion. It is where project source code is kept in a single place which is often called a shared repository. It allows developers to work on the same project in parallel without troubling when they want to develop new features, make changes, check out source code, or merge it together like a traditional workflow. It benefits directly to members of the development team by enhancing collaboration among team members and contributions. It also provides changes history where you can easily trace back once any issue occurred.</p>
         <h3>Use Credential Management (Belmont, 2018)</h3>
